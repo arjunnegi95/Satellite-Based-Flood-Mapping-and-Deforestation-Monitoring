@@ -1,0 +1,13 @@
+torch
+torchvision
+segmentation-models-pytorch
+rasterio
+albumentations
+scikit-learn
+earthengine-api
+gradio
+matplotlib
+pandas
+requests
+Pillow
+numpy

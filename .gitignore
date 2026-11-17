@@ -1,0 +1,8 @@
+@"
+data/
+__pycache__/
+*.pyc
+.venv/
+.env
+outputs/*.png
+"@ | Set-Content .gitignore -Encoding utf8

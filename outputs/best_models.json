@@ -1,0 +1,7 @@
+{
+  "ranked_by": "iou",
+  "best": {
+    "flood mapping": "U-Net ResNet34 (6 channels)",
+    "deforestation": "NDVI differencing rule (drop 0.1)"
+  }
+}

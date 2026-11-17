@@ -1,0 +1,13 @@
+Device: cpu
+
+=== FLOOD U-Net on 90 validation chips (thr 0.5) ===
+IoU 0.5930 | Dice 0.7445 | F1 0.7445 | Precision 0.6913 | Recall 0.8065 | Pixel accuracy 0.9537
+Pixels: TP 1,357,394  FP 606,005  FN 325,769  TN 17,831,477
+
+=== DEFORESTATION U-Net on 40 validation patches (thr 0.5) ===
+IoU 0.0172 | Dice 0.0339 | F1 0.0339 | Precision 0.0611 | Recall 0.0234 | Pixel accuracy 0.9389
+Pixels: TP 2,809  FP 43,170  FN 117,025  TN 2,458,436
+
+=== NDVI differencing baseline (same patches) ===
+IoU 0.2022 | Dice 0.3363 | F1 0.3363 | Precision 0.3579 | Recall 0.3172 | Pixel accuracy 0.9428
+Pixels: TP 38,011  FP 68,180  FN 81,823  TN 2,433,426

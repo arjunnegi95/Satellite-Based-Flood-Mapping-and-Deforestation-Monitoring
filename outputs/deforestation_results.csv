@@ -1,0 +1,3 @@
+,iou,dice,precision,recall,f1,accuracy
+U-Net (trained),0.017,0.034,0.061,0.023,0.034,0.939
+NDVI differencing (rule),0.202,0.336,0.358,0.317,0.336,0.943

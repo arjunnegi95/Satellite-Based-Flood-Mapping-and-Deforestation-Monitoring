@@ -1,0 +1,30 @@
+Device: cpu | U-Net threshold: 0.5 | ranking metric: iou
+
+==================== FLOOD MAPPING ====================
+(validation pixels: 20,120,645, positive share: 8.37%)
+                                      accuracy  precision  recall     f1    iou   dice        TP      FP        FN         TN
+model                                                                                                                        
+U-Net ResNet34 (6 channels)             0.9812     0.8971  0.8755 0.8862 0.7956 0.8862 1,473,692 169,078   209,471 18,268,404
+NDWI rule (green, NIR)                  0.9743     0.9587  0.7244 0.8252 0.7024 0.8252 1,219,223  52,533   463,940 18,384,949
+MNDWI rule (green, SWIR)                0.9476     0.6217  0.9548 0.7531 0.6039 0.7531 1,607,124 977,882    76,039 17,459,600
+All-negative reference (not a model)    0.9163     0.0000  0.0000 0.0000 0.0000 0.0000         0       0 1,683,163 18,437,482
+
+>>> BEST MODEL by IOU: U-Net ResNet34 (6 channels)   (iou = 0.7956)
+    highest accuracy : U-Net ResNet34 (6 channels) (0.9812)
+    highest precision: NDWI rule (green, NIR) (0.9587)
+    note: predicting "nothing" everywhere already gives accuracy 0.9163, which is why accuracy alone cannot pick the best model; IoU / F1 are used for the ranking.
+
+==================== DEFORESTATION ====================
+(validation pixels: 2,621,440, positive share: 4.57%)
+                                      accuracy  precision  recall     f1    iou   dice     TP      FP      FN        TN
+model                                                                                                                  
+NDVI differencing rule (drop 0.1)       0.9181     0.2941  0.5660 0.3871 0.2400 0.3871 67,824 162,775  52,010 2,338,831
+NDVI differencing rule (drop 0.2)       0.9428     0.3579  0.3172 0.3363 0.2022 0.3363 38,011  68,180  81,823 2,433,426
+NDVI differencing rule (drop 0.3)       0.9507     0.4027  0.1613 0.2303 0.1301 0.2303 19,324  28,661 100,510 2,472,945
+U-Net ResNet34 (10 channels)            0.9389     0.0611  0.0235 0.0339 0.0173 0.0339  2,814  43,221 117,020 2,458,385
+All-negative reference (not a model)    0.9543     0.0000  0.0000 0.0000 0.0000 0.0000      0       0 119,834 2,501,606
+
+>>> BEST MODEL by IOU: NDVI differencing rule (drop 0.1)   (iou = 0.2400)
+    highest accuracy : NDVI differencing rule (drop 0.3) (0.9507)
+    highest precision: NDVI differencing rule (drop 0.3) (0.4027)
+    note: predicting "nothing" everywhere already gives accuracy 0.9543, which is why accuracy alone cannot pick the best model; IoU / F1 are used for the ranking.
